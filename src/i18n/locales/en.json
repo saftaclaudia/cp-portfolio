@@ -6,9 +6,11 @@
   },
   "hero": {
     "greeting": "Hi, I'm",
-    "name": "Your Name",
+    "name": "Claudia Popescu",
     "title": "Frontend Developer",
     "description": "I build clean, responsive web applications with React and TypeScript.",
-    "cta": "View my projects"
+    "resume": "Resume",
+    "contact": "Contact",
+    "badge": "Frontend Developer • React Enthusiast"
   }
 }

@@ -6,9 +6,11 @@
   },
   "hero": {
     "greeting": "Hallo, ich bin",
-    "name": "Dein Name",
+    "name": "Claudia Popescu",
     "title": "Frontend-Entwickler",
     "description": "Ich entwickle saubere, responsive Webanwendungen mit React und TypeScript.",
-    "cta": "Meine Projekte ansehen"
+    "resume": "Lebenslauf",
+    "contact": "Kontakt",
+    "badge": "Frontend-Entwickler • React-Enthusiast"
   }
 }
