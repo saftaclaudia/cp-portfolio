@@ -61,7 +61,7 @@ function Header() {
 
         <button
           onClick={toggleLanguage}
-          className="flex text-center gap-1 text-gray-700 drak:text-gray-300 hover:text-mint-700 dark:hover:text-mint:300 transition-colors"
+          className="flex text-center gap-1 text-gray-700 dark:text-gray-300 hover:text-mint-700 dark:hover:text-mint-300 transition-colors"
           aria-label="Toggle language"
         >
           <Globe size={20} />
@@ -71,7 +71,7 @@ function Header() {
         </button>
         <button
           onClick={toggleTheme}
-          className=" text-gray-700 drak:text-gray-300 hover:text-mint-700 dark:hover:text-mint:300 transition-colors"
+          className="text-gray-700 dark:text-gray-300 hover:text-mint-700 dark:hover:text-mint-300 transition-colors"
           aria-label="Toggle theme"
         >
           {isDark ? <Sun size={20} /> : <Moon size={20} />}

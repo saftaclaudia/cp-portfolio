@@ -2,6 +2,7 @@ import Header from "./components/Header";
 import { ThemeProvider } from "./context/ThemeContext";
 import { LanguageProvider } from "./context/LanguageContext";
 import Hero from "./components/Hero";
+import Projects from "./components/Projects";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <div className="min-h-screen bg-gray-50 dark:bg-gray-950 transition-colors">
           <Header />
           <Hero />
+          <Projects />
         </div>
       </LanguageProvider>
     </ThemeProvider>
