@@ -1,6 +1,14 @@
 {
   "header": {
+    "home": "Home",
     "projects": "Projects",
     "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "name": "Your Name",
+    "title": "Frontend Developer",
+    "description": "I build clean, responsive web applications with React and TypeScript.",
+    "cta": "View my projects"
   }
 }

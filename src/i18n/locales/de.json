@@ -1,6 +1,14 @@
 {
   "header": {
+    "home": "Startseite",
     "projects": "Projekte",
-    "contact": "Kontact"
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "greeting": "Hallo, ich bin",
+    "name": "Dein Name",
+    "title": "Frontend-Entwickler",
+    "description": "Ich entwickle saubere, responsive Webanwendungen mit React und TypeScript.",
+    "cta": "Meine Projekte ansehen"
   }
 }
