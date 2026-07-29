@@ -12,5 +12,16 @@
     "resume": "Resume",
     "contact": "Contact",
     "badge": "Frontend Developer • React Enthusiast"
+  },
+  "contact": {
+    "title": "Get in touch",
+    "subtitle": "Have a project in mind or just want to say hi? Send me a message.",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send message",
+    "success": "Thanks! Your message has been sent.",
+    "errorRequired": "This field is required",
+    "errorEmail": "Please enter a valid email"
   }
 }

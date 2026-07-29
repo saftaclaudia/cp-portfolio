@@ -12,5 +12,16 @@
     "resume": "Lebenslauf",
     "contact": "Kontakt",
     "badge": "Frontend-Entwickler • React-Enthusiast"
+  },
+  "contact": {
+    "title": "Kontakt aufnehmen",
+    "subtitle": "Hast du ein Projekt im Kopf oder möchtest einfach Hallo sagen? Schick mir eine Nachricht.",
+    "name": "Name",
+    "email": "E-Mail",
+    "message": "Nachricht",
+    "send": "Nachricht senden",
+    "success": "Danke! Deine Nachricht wurde gesendet.",
+    "errorRequired": "Dieses Feld ist erforderlich",
+    "errorEmail": "Bitte gib eine gültige E-Mail-Adresse ein"
   }
 }

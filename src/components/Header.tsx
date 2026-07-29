@@ -3,6 +3,7 @@ import { Sun, Moon, Globe } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
 import { useTheme } from "../context/useTheme";
 import { useLanguage } from "../context/useLanguage";
+import { Link } from "react-router-dom";
 
 const socialLinks = [
   { icon: FaGithub, href: "https://github.com/saftaclaudia", label: "GitHub" },
@@ -21,18 +22,24 @@ function Header() {
   return (
     <header className="grid grid-cols-3 items-center py-6 px-8 bg-gray-50 dark:bg-gray-950 transition-colors">
       <nav className="flex gap-6">
-        <a
-          href="#home"
+        <Link
+          to="/"
           className="text-gray-900 dark:text-white font-medium hover:text-mint-700 dark:hover:text-mint-300 transition-colors"
         >
           {t("header.home")}
-        </a>
-        <a
-          href="#projects"
+        </Link>
+        <Link
+          to="/#projects"
           className="text-gray-600 dark:text-gray-300 hover:text-mint-700 dark:hover:text-mint-300 transition-colors"
         >
           {t("header.projects")}
-        </a>
+        </Link>
+        <Link
+          to="/contact"
+          className="text-gray-600 dark:text-gray-300 hover:text-mint-700 dark:hover:text-mint-300 transition-colors"
+        >
+          {t("header.contact")}
+        </Link>
       </nav>
 
       <div className="flex justify-center">
