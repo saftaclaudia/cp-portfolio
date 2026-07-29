@@ -22,6 +22,7 @@
     "send": "Nachricht senden",
     "success": "Danke! Deine Nachricht wurde gesendet.",
     "errorRequired": "Dieses Feld ist erforderlich",
-    "errorEmail": "Bitte gib eine gültige E-Mail-Adresse ein"
+    "errorEmail": "Bitte gib eine gültige E-Mail-Adresse ein",
+    "errorSend": "Etwas ist schiefgelaufen. Bitte versuche es erneut oder schreib mir direkt eine E-Mail."
   }
 }

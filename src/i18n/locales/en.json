@@ -22,6 +22,7 @@
     "send": "Send message",
     "success": "Thanks! Your message has been sent.",
     "errorRequired": "This field is required",
-    "errorEmail": "Please enter a valid email"
+    "errorEmail": "Please enter a valid email",
+    "errorSend": "Something went wrong. Please try again or email me directly."
   }
 }
