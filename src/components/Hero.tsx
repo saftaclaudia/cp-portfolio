@@ -5,9 +5,9 @@ function Hero() {
   const { t } = useTranslation();
 
   return (
-    <section className="grid grid-cols-1 md:grid-cols-2 items-center gap-12 px-8 py-16 max-w-6xl mx-auto min-h-[75vh]">
-      <div className="relative flex justify-center items-center">
-        <div className="w-72 h-72 md:w-96 md:h-96 rounded-full bg-mint-100 dark:bg-gray-800 flex items-center justify-center">
+    <section className="grid grid-cols-1 md:grid-cols-2 items-center gap-16 px-8 py-24 max-w-6xl mx-auto min-h-[85vh]">
+      <div className="relative flex justify-center items-center group">
+        <div className="w-80 h-80 md:w-[26rem] md:h-[26rem] rounded-full bg-mint-100 dark:bg-gray-800 flex items-center justify-center transition-transform duration-500 group-hover:scale-105">
           <Code2
             size={120}
             className="text-mint-700 dark:text-mint-300"
@@ -48,21 +48,21 @@ function Hero() {
       </div>
 
       <div>
-        <p className="text-mint-700 dark:text-mint-300 text-lg mb-2">
+        <p className="text-mint-700 dark:text-mint-300 text-lg mb-3">
           {t("hero.greeting")}
         </p>
-        <h1 className="text-5xl font-bold text-gray-900 dark:text-white mb-4">
+        <h1 className="text-5xl font-bold text-gray-900 dark:text-white mb-5 leading-tight">
           {t("hero.name")}
         </h1>
-        <h2 className="text-2xl text-gray-600 dark:text-gray-300 mb-6">
+        <h2 className="text-2xl text-gray-600 dark:text-gray-300 mb-8">
           {t("hero.title")}
         </h2>
-        <p className="text-gray-600 dark:text-gray-400 max-w-md mb-8">
+        <p className="text-gray-600 dark:text-gray-400 max-w-md mb-10 text-lg leading-relaxed">
           {t("hero.description")}
         </p>
 
         <div className="flex items-center gap-6">
-          <button className="bg-gray-900 dark:bg-white text-white dark:text-gray-900 px-6 py-3 rounded-lg font-medium hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors">
+          <button className="bg-gray-900 dark:bg-white text-white dark:text-gray-900 px-7 py-3.5 rounded-lg font-medium hover:bg-gray-800 dark:hover:bg-gray-100 hover:-translate-y-0.5 transition-all duration-200">
             {t("hero.resume")}
           </button>
           <a
