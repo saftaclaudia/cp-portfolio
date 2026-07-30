@@ -7,9 +7,9 @@ function Hero() {
   return (
     <section className="grid grid-cols-1 md:grid-cols-2 items-center gap-16 px-8 py-24 max-w-6xl mx-auto min-h-[85vh]">
       <div className="relative flex justify-center items-center group">
-        <div className="w-80 h-80 md:w-[26rem] md:h-[26rem] rounded-full bg-mint-100 dark:bg-gray-800 flex items-center justify-center transition-transform duration-500 group-hover:scale-105">
+        <div className="w-[min(70vw,22rem)] h-[min(70vw,22rem)] rounded-full bg-mint-100 dark:bg-gray-800 flex items-center justify-center transition-transform duration-500 group-hover:scale-105">
           <Code2
-            size={120}
+            size={130}
             className="text-mint-700 dark:text-mint-300"
             strokeWidth={1.5}
           />
