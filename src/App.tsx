@@ -6,6 +6,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import ContactPage from "./pages/ContactPage";
 import ScrollToHash from "./components/ScrollToHash";
+import Footer from "./components/Footer";
+import BackToTop from "./components/BackToTop";
 
 function App() {
   return (
@@ -13,13 +15,17 @@ function App() {
       <LanguageProvider>
         <BrowserRouter>
           <ScrollToHash />
-          <div className="min-h-screen bg-gray-50 dark:bg-gray-950 transition-colors">
+          <div className="min-h-screen flex flex-col bg-gray-50 dark:bg-gray-950 transition-colors">
             <Header />
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/contact" element={<ContactPage />} />
-            </Routes>
+            <main className="flex-1">
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/contact" element={<ContactPage />} />
+              </Routes>
+            </main>
+            <Footer />
           </div>
+          <BackToTop />
         </BrowserRouter>
       </LanguageProvider>
     </ThemeProvider>

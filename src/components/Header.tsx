@@ -20,7 +20,7 @@ function Header() {
   const { language, toggleLanguage } = useLanguage();
 
   return (
-    <header className="grid grid-cols-3 items-center py-6 px-8 bg-gray-50 dark:bg-gray-950 transition-colors">
+    <header className="sticky top-0 z-50 grid grid-cols-3 items-center py-6 px-8 bg-gray-50/95 dark:bg-gray-950/95 backdrop-blur-sm transition-colors">
       <nav className="flex gap-6">
         <Link
           to="/"

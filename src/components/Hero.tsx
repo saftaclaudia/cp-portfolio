@@ -62,14 +62,20 @@ function Hero() {
         </p>
 
         <div className="flex items-center gap-6">
-          <button className="bg-gray-900 dark:bg-white text-white dark:text-gray-900 px-7 py-3.5 rounded-lg font-medium hover:bg-gray-800 dark:hover:bg-gray-100 hover:-translate-y-0.5 transition-all duration-200">
-            {t("hero.resume")}
-          </button>
           <a
-            href="#contact"
+            href="https://saftaclaudia.github.io/interactive-resume/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-gray-900 dark:bg-white text-white dark:text-gray-900 px-7 py-3.5 rounded-lg font-medium hover:bg-gray-800 dark:hover:bg-gray-100 hover:-translate-y-0.5 transition-all duration-200 inline-block"
+          >
+            {t("hero.resume")}
+          </a>
+          <a
+            href="/cv.pdf"
+            download
             className="text-gray-900 dark:text-white font-medium underline underline-offset-4 hover:text-mint-700 dark:hover:text-mint-300 transition-colors"
           >
-            {t("hero.contact")}
+            {t("hero.downloadCv")}
           </a>
         </div>
       </div>

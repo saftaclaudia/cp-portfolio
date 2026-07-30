@@ -10,7 +10,7 @@
     "title": "Frontend-Entwickler",
     "description": "Ich entwickle saubere, responsive Webanwendungen mit React und TypeScript.",
     "resume": "Lebenslauf",
-    "contact": "Kontakt",
+    "downloadCv": "Lebenslauf herunterladen",
     "badge": "Frontend-Entwickler • React-Enthusiast"
   },
   "contact": {
@@ -24,5 +24,9 @@
     "errorRequired": "Dieses Feld ist erforderlich",
     "errorEmail": "Bitte gib eine gültige E-Mail-Adresse ein",
     "errorSend": "Etwas ist schiefgelaufen. Bitte versuche es erneut oder schreib mir direkt eine E-Mail."
+  },
+  "footer": {
+    "rights": "Alle Rechte vorbehalten.",
+    "madeWith": "Erstellt mit React & TypeScript"
   }
 }

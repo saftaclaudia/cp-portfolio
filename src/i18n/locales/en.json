@@ -10,7 +10,7 @@
     "title": "Frontend Developer",
     "description": "I build clean, responsive web applications with React and TypeScript.",
     "resume": "Resume",
-    "contact": "Contact",
+    "downloadCv": "Download CV",
     "badge": "Frontend Developer • React Enthusiast"
   },
   "contact": {
@@ -24,5 +24,9 @@
     "errorRequired": "This field is required",
     "errorEmail": "Please enter a valid email",
     "errorSend": "Something went wrong. Please try again or email me directly."
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "madeWith": "Built with React & TypeScript"
   }
 }
