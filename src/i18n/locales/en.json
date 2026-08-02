@@ -11,7 +11,8 @@
     "description": "I build clean, responsive web applications with React and TypeScript.",
     "resume": "Resume",
     "downloadCv": "Download CV",
-    "badge": "Frontend Developer • React Enthusiast"
+    "badge": "Frontend Developer • React Enthusiast",
+    "available": "Available for work"
   },
   "contact": {
     "title": "Get in touch",

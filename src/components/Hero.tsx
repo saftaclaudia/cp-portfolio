@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
-import { Code2, Sparkles } from "lucide-react";
+import { Sparkles } from "lucide-react";
+import profilePhoto from "../assets/profile.jpg";
 
 function Hero() {
   const { t } = useTranslation();
@@ -7,11 +8,11 @@ function Hero() {
   return (
     <section className="grid grid-cols-1 md:grid-cols-2 items-center gap-16 px-8 py-24 max-w-6xl mx-auto min-h-[85vh]">
       <div className="relative flex justify-center items-center group">
-        <div className="w-[min(70vw,22rem)] h-[min(70vw,22rem)] rounded-full bg-mint-100 dark:bg-gray-800 flex items-center justify-center transition-transform duration-500 group-hover:scale-105">
-          <Code2
-            size={130}
-            className="text-mint-700 dark:text-mint-300"
-            strokeWidth={1.5}
+        <div className="w-[min(70vw,22rem)] h-[min(70vw,22rem)] rounded-full overflow-hidden ring-4 ring-mint-100 dark:ring-gray-800 transition-transform duration-500 group-hover:scale-105">
+          <img
+            src={profilePhoto}
+            alt="Claudia Popescu"
+            className="w-full h-full object-cover"
           />
         </div>
 
@@ -42,8 +43,11 @@ function Hero() {
           </div>
         </div>
 
-        <div className="absolute -top-2 -right-2 w-14 h-14 rounded-full bg-cream-300 flex items-center justify-center animate-bounce [animation-duration:3s]">
-          <Sparkles size={24} className="text-gray-800" />
+        <div className="absolute -top-2 -right-2 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-full px-4 py-2 shadow-md flex items-center gap-2">
+          <span className="w-2 h-2 rounded-full bg-mint-500 animate-pulse" />
+          <span className="text-xs font-medium text-gray-700 dark:text-gray-300">
+            {t("hero.available")}
+          </span>
         </div>
       </div>
 

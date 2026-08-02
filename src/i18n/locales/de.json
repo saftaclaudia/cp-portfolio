@@ -11,7 +11,8 @@
     "description": "Ich entwickle saubere, responsive Webanwendungen mit React und TypeScript.",
     "resume": "Lebenslauf",
     "downloadCv": "Lebenslauf herunterladen",
-    "badge": "Frontend-Entwickler • React-Enthusiast"
+    "badge": "Frontend-Entwickler • React-Enthusiast",
+    "available": "Verfügbar für neue Projekte"
   },
   "contact": {
     "title": "Kontakt aufnehmen",
