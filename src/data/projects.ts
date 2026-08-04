@@ -1,8 +1,10 @@
 import type { Project } from "../types/project";
+import interactiveResumeImg from "../assets/projects/preview_interactive-resume.png";
 
 export const projects: Project[] = [
   {
     id: "project-1",
+    slug: "interactive-resume",
     title: "Interactive Resume",
     description:
       "This project is a modern, interactive resume built as a single-page web application. It combines clean UI design with dynamic JavaScript behavior to create an engaging user experience.The goal of this project was to go beyond a traditional CV and build a visually appealing, responsive, and interactive resume that reflects both technical and design skills.",
@@ -10,9 +12,11 @@ export const projects: Project[] = [
 
     liveUrl: "https://saftaclaudia.github.io/interactive-resume/",
     githubUrl: "https://github.com/saftaclaudia/interactive-resume",
+    image: interactiveResumeImg,
   },
   {
     id: "project-2",
+    slug: "meditack",
     title: "MediTrack",
     description:
       "MediTrack is a full-stack web application designed for women 40+ to take control of their health — track recommended medical exams, manage appointments, monitor daily nutrition, log physical activity, and stay on top of hydration goals.",

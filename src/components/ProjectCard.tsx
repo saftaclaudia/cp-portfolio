@@ -1,63 +1,41 @@
+import { Link } from "react-router-dom";
 import type { Project } from "../types/project";
-import { FaGithub } from "react-icons/fa6";
-import { ExternalLink } from "lucide-react";
 
 interface ProjectCardProps {
   project: Project;
 }
 
 function ProjectCard({ project }: ProjectCardProps) {
-  const visibleTech = project.tech.slice(0, 5);
-  const remainingCount = project.tech.length - visibleTech.length;
-
   return (
-    <div className="bg-white dark:bg-gray-900 rounded-xl p-8 border border-gray-200 dark:border-gray-800 hover:border-mint-500 dark:hover:border-mint-500 hover:-translate-y-1 hover:shadow-xl dark:hover:shadow-mint-900/20 transition-all duration-300">
-      <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
-        {project.title}
-      </h3>
-      <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
-        {project.description}
-      </p>
-      <div className="flex flex-wrap gap-2 mb-6">
-        {visibleTech.map((techName) => (
-          <span
-            key={techName}
-            className="text-xs font-medium bg-mint-100 dark:bg-gray-800 text-mint-700 dark:text-mint-300 px-3 py-1.5 rounded-full"
-          >
-            {techName}
-          </span>
-        ))}
-        {remainingCount > 0 && (
-          <span className="text-sx font-medium text-gray-500 dark:text-gray-400 px-3 py-1.5">
-            +{remainingCount} more
-          </span>
+    <Link
+      to={`/projects/${project.slug}`}
+      className="group block rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-800 hover:border-mint-500 dark:hover:border-mint-500 hover:-translate-y-1 hover:shadow-xl dark:hover:shadow-mint-900/20 transition-all duration-300"
+    >
+      <div className="relative aspect-[16/10] bg-gray-100 dark:bg-gray-800 overflow-hidden">
+        {project.image ? (
+          <img
+            src={project.image}
+            alt={project.title}
+            className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+          />
+        ) : (
+          <div className="w-full h-full flex items-center justify-center text-gray-400 dark:text-gray-600 text-sm">
+            Preview coming soon
+          </div>
         )}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+        <h3 className="absolute bottom-4 left-5 text-xl font-bold text-white">
+          {project.title}
+        </h3>
       </div>
 
-      <div className="flex items-center gap-5">
-        <a
-          href={project.githubUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-1.5 text-sm text-gray-700 dark:text-gray-300 hover:text-mint-700 dark:hover:text-mint-300 transition-colors"
-        >
-          <FaGithub size={16} />
-          Code
-        </a>
-
-        {project.liveUrl && (
-          <a
-            href={project.liveUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-1.5 text-sm text-gray-700 dark:text-gray-300 hover:text-mint-700 dark:hover:text-mint-300 transition-colors"
-          >
-            <ExternalLink size={16} />
-            Live
-          </a>
-        )}
+      <div className="p-6 bg-white dark:bg-gray-900">
+        <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed line-clamp-2">
+          {project.description}
+        </p>
       </div>
-    </div>
+    </Link>
   );
 }
+
 export default ProjectCard;

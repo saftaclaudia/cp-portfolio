@@ -1,5 +1,6 @@
 import Header from "./components/Header";
 import { ThemeProvider } from "./context/ThemeContext";
+import ProjectDetailPage from "./pages/ProjectDetailPage";
 
 import { LanguageProvider } from "./context/LanguageContext";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -22,6 +23,7 @@ function App() {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/contact" element={<ContactPage />} />
+                <Route path="/projects/:slug" element={<ProjectDetailPage />} />
               </Routes>
             </main>
             <Footer />
