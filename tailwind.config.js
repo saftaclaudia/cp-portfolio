@@ -6,6 +6,7 @@ export default {
     extend: {
       colors: {
         mint: {
+          50: "#F0FBF8",
           100: "#D9FBF6",
           300: "#A6EFE7",
           500: "#5FD4C6",
