@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import type { Project } from "../types/project";
 import { useTranslation } from "react-i18next";
+import { ImageOff } from "lucide-react";
 
 interface ProjectCardProps {
   project: Project;
@@ -12,7 +13,7 @@ function ProjectCard({ project }: ProjectCardProps) {
   return (
     <Link
       to={`/projects/${project.slug}`}
-      className="group block rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-800 hover:border-mint-500 dark:hover:border-mint-500 hover:-translate-y-1 hover:shadow-xl dark:hover:shadow-mint-900/20 transition-all duration-300"
+      className="group block rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-800 hover:border-mint-500 dark:hover:border-mint-500 hover:-translate-y-1 hover:shadow-xl dark:hover:shadow-mint-900/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-mint-500 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-50 dark:focus-visible:ring-offset-gray-950 transition-all duration-300"
     >
       <div className="relative aspect-[16/10] bg-mint-50 dark:bg-gray-800 overflow-hidden">
         {project.image ? (
@@ -22,8 +23,11 @@ function ProjectCard({ project }: ProjectCardProps) {
             className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
           />
         ) : (
-          <div className="w-full h-full flex items-center justify-center text-gray-400 dark:text-gray-600 text-sm">
-            Preview coming soon
+          <div className="w-full h-full flex flex-col items-center justify-center gap-2 bg-gradient-to-br from-mint-50 to-mint-100 dark:from-gray-800 dark:to-gray-900 text-mint-700/60 dark:text-gray-500">
+            <ImageOff size={28} strokeWidth={1.5} />
+            <span className="text-sm font-medium">
+              {t("projectCard.comingSoon")}
+            </span>
           </div>
         )}
       </div>

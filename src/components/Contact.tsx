@@ -131,7 +131,7 @@ function Contact() {
             type="email"
             value={formData.email}
             onChange={(e) => handleChange("email", e.target.value)}
-            className="w-full px-4 py-2.5 roundex-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-white focus:outline-none ficus:ring-2 focus:ring-mint-500"
+            className="w-full px-4 py-2.5 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-mint-500"
           />
           {errors.email && (
             <p className="text-red-500 text-sm mt-1">{errors.email}</p>
@@ -149,7 +149,7 @@ function Contact() {
             rows={5}
             value={formData.message}
             onChange={(e) => handleChange("message", e.target.value)}
-            className="w-full px-4 py-2.5 roundex-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-white focus:outline-none ficus:ring-2 focus:ring-mint-500"
+            className="w-full px-4 py-2.5 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-mint-500"
           />
           {errors.message && (
             <p className="text-red-500 text-sm mt-1">{errors.message}</p>
@@ -159,7 +159,7 @@ function Contact() {
         <button
           type="submit"
           disabled={isSending}
-          className="bg-gray-900 dark:bg-white text-white dark:text-gray-900 px-6 py-3 rounded-lg font-medium hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors"
+          className="bg-gray-900 dark:bg-white text-white dark:text-gray-900 px-6 py-3 rounded-lg font-medium hover:bg-gray-800 dark:hover:bg-gray-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-mint-500 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-50 dark:focus-visible:ring-offset-gray-950 transition-colors"
         >
           {isSending ? "..." : t("contact.send")}
         </button>

@@ -11,7 +11,7 @@ function Hero() {
         <div className="w-[min(70vw,22rem)] h-[min(70vw,22rem)] rounded-full overflow-hidden ring-4 ring-mint-100 dark:ring-gray-800 transition-transform duration-500 group-hover:scale-105">
           <img
             src={profilePhoto}
-            alt="Claudia Popescu"
+            alt={t("hero.name")}
             className="w-full h-full object-cover"
           />
         </div>
@@ -70,14 +70,14 @@ function Hero() {
             href="https://saftaclaudia.github.io/interactive-resume/"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-gray-900 dark:bg-white text-white dark:text-gray-900 px-7 py-3.5 rounded-lg font-medium hover:bg-gray-800 dark:hover:bg-gray-100 hover:-translate-y-0.5 transition-all duration-200 inline-block"
+            className="bg-gray-900 dark:bg-white text-white dark:text-gray-900 px-7 py-3.5 rounded-lg font-medium hover:bg-gray-800 dark:hover:bg-gray-100 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-mint-500 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-50 dark:focus-visible:ring-offset-gray-950 transition-all duration-200 inline-block"
           >
             {t("hero.resume")}
           </a>
           <a
             href="/cv.pdf"
             download
-            className="text-gray-900 dark:text-white font-medium underline underline-offset-4 hover:text-mint-700 dark:hover:text-mint-300 transition-colors"
+            className="rounded-sm text-gray-900 dark:text-white font-medium underline underline-offset-4 hover:text-mint-700 dark:hover:text-mint-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-mint-500 transition-colors"
           >
             {t("hero.downloadCv")}
           </a>
