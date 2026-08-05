@@ -1,11 +1,14 @@
 import { Link } from "react-router-dom";
 import type { Project } from "../types/project";
+import { useTranslation } from "react-i18next";
 
 interface ProjectCardProps {
   project: Project;
 }
 
 function ProjectCard({ project }: ProjectCardProps) {
+  const { t } = useTranslation();
+
   return (
     <Link
       to={`/projects/${project.slug}`}
@@ -15,7 +18,7 @@ function ProjectCard({ project }: ProjectCardProps) {
         {project.image ? (
           <img
             src={project.image}
-            alt={project.title}
+            alt={t(`projects.${project.slug}.title`)}
             className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
           />
         ) : (
@@ -25,13 +28,13 @@ function ProjectCard({ project }: ProjectCardProps) {
         )}
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
         <h3 className="absolute bottom-4 left-5 text-xl font-bold text-white">
-          {project.title}
+          {t(`projects.${project.slug}.title`)}
         </h3>
       </div>
 
       <div className="p-6 bg-white dark:bg-gray-900">
         <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed line-clamp-2">
-          {project.description}
+          {t(`projects.${project.slug}.description`)}
         </p>
       </div>
     </Link>

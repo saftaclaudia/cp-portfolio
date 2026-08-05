@@ -2,8 +2,10 @@ import { useParams, Link, Navigate } from "react-router-dom";
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import { FaGithub } from "react-icons/fa6";
 import { projects } from "../data/projects";
+import { useTranslation } from "react-i18next";
 
 function ProjectDetailPage() {
+  const { t } = useTranslation();
   const { slug } = useParams<{ slug: string }>();
   const project = projects.find((p) => p.slug === slug);
 
@@ -25,17 +27,17 @@ function ProjectDetailPage() {
         <div className="rounded-2xl overflow-hidden mb-8 border border-gray-200 dark:border-gray-800">
           <img
             src={project.image}
-            alt={project.title}
+            alt={t(`projects.${project.slug}.title`)}
             className="w-full h-auto"
           />
         </div>
       )}
 
       <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-        {project.title}
+        {t(`projects.${project.slug}.title`)}
       </h1>
       <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-8">
-        {project.description}
+        {t(`projects.${project.slug}.description`)}
       </p>
 
       <div className="flex flex-wrap gap-2 mb-8">

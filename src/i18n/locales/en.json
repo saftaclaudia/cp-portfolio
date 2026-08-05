@@ -29,5 +29,15 @@
   "footer": {
     "rights": "All rights reserved.",
     "madeWith": "Built with React & TypeScript"
+  },
+  "projects": {
+    "interactive-resume": {
+      "title": "Interaktiver Lebenslauf",
+      "description": "Dieses Projekt ist ein moderner, interaktiver Lebenslauf als Single-Page-Webanwendung. Es kombiniert sauberes UI-Design mit dynamischem JavaScript-Verhalten für ein ansprechendes Nutzererlebnis."
+    },
+    "meditrack": {
+      "title": "MediTrack",
+      "description": "MediTrack ist eine Full-Stack-Webanwendung für Frauen 40+, um die Gesundheit selbst in die Hand zu nehmen — empfohlene medizinische Untersuchungen verfolgen, Termine verwalten, tägliche Ernährung überwachen, körperliche Aktivität protokollieren und Trinkziele im Blick behalten."
+    }
   }
 }
