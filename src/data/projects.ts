@@ -1,5 +1,6 @@
 import type { Project } from "../types/project";
 import interactiveResumeImg from "../assets/projects/preview_interactive-resume.png";
+import meditrackImg from "../assets/projects/preview_meditrack.phg.jpg";
 
 export const projects: Project[] = [
   {
@@ -58,6 +59,8 @@ export const projects: Project[] = [
         ],
       },
     ],
+    liveUrl: "https://meditrack-app-six.vercel.app",
     githubUrl: "https://github.com/saftaclaudia/meditrack-app",
+    image: meditrackImg,
   },
 ];
