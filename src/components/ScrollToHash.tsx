@@ -15,6 +15,8 @@ function ScrollToHash() {
       } else {
         window.scrollTo(0, 0);
       }
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   }, [location]);
 
