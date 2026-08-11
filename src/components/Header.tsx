@@ -3,7 +3,7 @@ import { Sun, Moon, Globe, X, Menu } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
 import { useTheme } from "../context/useTheme";
 import { useLanguage } from "../context/useLanguage";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 
 const socialLinks = [
@@ -31,25 +31,35 @@ function Logo() {
   );
 }
 
+function isNavItemActive(to: string, pathname: string, hash: string) {
+  if (to === "/") return pathname === "/" && !hash;
+  if (to === "/#projects") return pathname === "/" && hash === "#projects";
+  return pathname === to;
+}
+
 function NavLinks({ onNavigate }: { onNavigate?: () => void }) {
   const { t } = useTranslation();
+  const { pathname, hash } = useLocation();
 
   return (
     <>
-      {navItems.map((item, index) => (
-        <Link
-          key={item.to}
-          to={item.to}
-          onClick={onNavigate}
-          className={
-            index === 0
-              ? "rounded-sm text-gray-900 dark:text-white font-medium hover:text-mint-700 dark:hover:text-mint-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-mint-500 transition-colors"
-              : "rounded-sm text-gray-600 dark:text-gray-300 hover:text-mint-700 dark:hover:text-mint-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-mint-500 transition-colors"
-          }
-        >
-          {t(item.key)}
-        </Link>
-      ))}
+      {navItems.map((item) => {
+        const active = isNavItemActive(item.to, pathname, hash);
+        return (
+          <Link
+            key={item.to}
+            to={item.to}
+            onClick={onNavigate}
+            className={
+              active
+                ? "rounded-sm text-gray-900 dark:text-white font-medium border-b-2 border-mint-500 pb-0.5 hover:text-mint-700 dark:hover:text-mint-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-mint-500 transition-colors"
+                : "rounded-sm text-gray-600 dark:text-gray-300 font-medium border-b-2 border-transparent pb-0.5 hover:text-mint-700 dark:hover:text-mint-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-mint-500 transition-colors"
+            }
+          >
+            {t(item.key)}
+          </Link>
+        );
+      })}
     </>
   );
 }
