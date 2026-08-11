@@ -22,9 +22,12 @@ function ProjectDetailPage() {
     <div className="max-w-4xl mx-auto px-8 py-16">
       <Link
         to="/#projects"
-        className="rounded-sm inline-flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400 hover:text-mint-700 dark:hover:text-mint-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-mint-500 transition-colors mb-8"
+        className="group rounded-sm inline-flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400 hover:text-mint-700 dark:hover:text-mint-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-mint-500 transition-colors mb-8"
       >
-        <ArrowLeft size={16} />
+        <ArrowLeft
+          size={16}
+          className="transition-transform duration-200 group-hover:-translate-x-1"
+        />
         {t("projectDetail.back")}
       </Link>
 
@@ -38,6 +41,9 @@ function ProjectDetailPage() {
         </div>
       )}
 
+      <p className="text-coral-500 dark:text-coral-300 font-semibold text-sm tracking-wide uppercase mb-2">
+        {t("projectDetail.eyebrow")}
+      </p>
       <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
         {t(`projects.${project.slug}.title`)}
       </h1>
@@ -48,7 +54,8 @@ function ProjectDetailPage() {
       <div className="mb-8">
         {project.tech.map((group) => (
           <div key={group.category} className="mb-4 last:mb-0">
-            <h3 className="text-xs font-semibold uppercase tracking-wide text-gray-400 dark:text-gray-500 mb-2">
+            <h3 className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-gray-400 dark:text-gray-500 mb-2">
+              <span className="w-3 h-0.5 rounded-full bg-mint-500" />
               {group.category}
             </h3>
             <div className="flex flex-wrap gap-2">

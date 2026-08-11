@@ -35,6 +35,7 @@
     "comingSoon": "Preview coming soon"
   },
   "projectDetail": {
+    "eyebrow": "Project",
     "back": "Back to projects",
     "viewCode": "View Code",
     "liveDemo": "Live Demo"
