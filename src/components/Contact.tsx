@@ -128,7 +128,7 @@ function Contact() {
                 type="text"
                 value={formData.name}
                 onChange={(e) => handleChange("name", e.target.value)}
-                className="w-full pl-11 pr-4 py-2.5 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-950 text-gray-900 dark:text-white hover:border-mint-500 dark:hover:border-mint-400 focus:outline-none focus:ring-2 focus:ring-mint-500 focus:border-mint-500 transition-colors"
+                className="w-full pl-11 pr-4 py-2.5 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-950 text-gray-900 dark:text-white hover:border-mint-500 dark:hover:border-mint-300 focus:outline-none focus:ring-2 focus:ring-mint-500 focus:border-mint-500 transition-colors"
               />
             </div>
             {errors.name && (
@@ -152,7 +152,7 @@ function Contact() {
                 type="email"
                 value={formData.email}
                 onChange={(e) => handleChange("email", e.target.value)}
-                className="w-full pl-11 pr-4 py-2.5 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-950 text-gray-900 dark:text-white hover:border-mint-500 dark:hover:border-mint-400 focus:outline-none focus:ring-2 focus:ring-mint-500 focus:border-mint-500 transition-colors"
+                className="w-full pl-11 pr-4 py-2.5 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-950 text-gray-900 dark:text-white hover:border-mint-500 dark:hover:border-mint-300 focus:outline-none focus:ring-2 focus:ring-mint-500 focus:border-mint-500 transition-colors"
               />
             </div>
             {errors.email && (
@@ -176,7 +176,7 @@ function Contact() {
                 rows={5}
                 value={formData.message}
                 onChange={(e) => handleChange("message", e.target.value)}
-                className="w-full pl-11 pr-4 py-2.5 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-950 text-gray-900 dark:text-white hover:border-mint-500 dark:hover:border-mint-400 focus:outline-none focus:ring-2 focus:ring-mint-500 focus:border-mint-500 transition-colors"
+                className="w-full pl-11 pr-4 py-2.5 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-950 text-gray-900 dark:text-white hover:border-mint-500 dark:hover:border-mint-300 focus:outline-none focus:ring-2 focus:ring-mint-500 focus:border-mint-500 transition-colors"
               />
             </div>
             {errors.message && (
