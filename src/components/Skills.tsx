@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import {
   SiReact,
@@ -23,6 +24,26 @@ const skills = [
 
 function Skills() {
   const { t } = useTranslation();
+  const gridRef = useRef<HTMLDivElement>(null);
+  const [inView, setInView] = useState(false);
+
+  useEffect(() => {
+    const el = gridRef.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setInView(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.2 },
+    );
+    observer.observe(el);
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <section id="skills" className="px-8 py-24 max-w-6xl mx-auto">
@@ -36,13 +57,20 @@ function Skills() {
         {t("skills.subtitle")}
       </p>
 
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-        {skills.map((skill) => {
+      <div ref={gridRef} className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+        {skills.map((skill, index) => {
           const Icon = skill.icon;
           return (
             <div
               key={skill.label}
-              className="flex flex-col items-center gap-3 p-6 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 hover:border-mint-500 dark:hover:border-mint-500 hover:-translate-y-1 hover:shadow-lg dark:hover:shadow-mint-700/20 transition-all duration-300"
+              style={
+                inView ? { animationDelay: `${index * 60}ms` } : undefined
+              }
+              className={`flex flex-col items-center gap-3 p-6 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 hover:border-mint-500 dark:hover:border-mint-500 hover:-translate-y-1 hover:shadow-lg dark:hover:shadow-mint-700/20 transition-all duration-300 ${
+                inView
+                  ? "animate-[fade-in-up_0.5s_ease-out_both]"
+                  : "opacity-0"
+              }`}
             >
               <Icon size={32} className="text-mint-700 dark:text-mint-300" />
               <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
