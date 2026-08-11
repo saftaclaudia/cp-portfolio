@@ -53,8 +53,8 @@ function NavLinks({ onNavigate }: { onNavigate?: () => void }) {
             onClick={onNavigate}
             className={
               active
-                ? "rounded-sm text-gray-900 dark:text-white font-medium border-b-2 border-mint-500 pb-0.5 hover:text-mint-700 dark:hover:text-mint-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-mint-500 transition-colors"
-                : "rounded-sm text-gray-600 dark:text-gray-300 font-medium border-b-2 border-transparent pb-0.5 hover:text-mint-700 dark:hover:text-mint-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-mint-500 transition-colors"
+                ? "w-fit rounded-sm text-gray-900 dark:text-white font-medium border-b-2 border-mint-500 pb-0.5 hover:text-mint-700 dark:hover:text-mint-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-mint-500 transition-colors"
+                : "w-fit rounded-sm text-gray-600 dark:text-gray-300 font-medium border-b-2 border-transparent pb-0.5 hover:text-mint-700 dark:hover:text-mint-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-mint-500 transition-colors"
             }
           >
             {t(item.key)}
