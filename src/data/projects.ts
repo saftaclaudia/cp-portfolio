@@ -1,6 +1,6 @@
 import type { Project } from "../types/project";
 import interactiveResumeImg from "../assets/projects/preview_interactive-resume.png";
-import meditrackImg from "../assets/projects/preview_meditrack.phg.jpg";
+import meditrackImg from "../assets/projects/preview_meditrack.png";
 
 export const projects: Project[] = [
   {
@@ -17,7 +17,7 @@ export const projects: Project[] = [
         ],
       },
     ],
-    liveUrl: "https://saftaclaudia.github.io/interactive-resume/",
+    liveUrl: "https://interactive-resume-ochre.vercel.app/",
     githubUrl: "https://github.com/saftaclaudia/interactive-resume",
     image: interactiveResumeImg,
   },

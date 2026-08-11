@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import type { Project } from "../types/project";
 import { useTranslation } from "react-i18next";
-import { ImageOff } from "lucide-react";
+import { ImageOff, ArrowUpRight } from "lucide-react";
 
 interface ProjectCardProps {
   project: Project;
@@ -9,6 +9,7 @@ interface ProjectCardProps {
 
 function ProjectCard({ project }: ProjectCardProps) {
   const { t } = useTranslation();
+  const previewTags = project.tech[0]?.items.slice(0, 3) ?? [];
 
   return (
     <Link
@@ -30,15 +31,29 @@ function ProjectCard({ project }: ProjectCardProps) {
             </span>
           </div>
         )}
+
+        <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-coral-500 text-white flex items-center justify-center shadow-lg opacity-0 scale-75 group-hover:opacity-100 group-hover:scale-100 transition-all duration-300">
+          <ArrowUpRight size={20} />
+        </div>
       </div>
 
       <div className="p-6 bg-white dark:bg-gray-900">
         <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
           {t(`projects.${project.slug}.title`)}
         </h3>
-        <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed line-clamp-2">
+        <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed line-clamp-2 mb-4">
           {t(`projects.${project.slug}.description`)}
         </p>
+        <div className="flex flex-wrap gap-2">
+          {previewTags.map((tag) => (
+            <span
+              key={tag}
+              className="text-xs font-medium bg-mint-100 dark:bg-gray-800 text-mint-700 dark:text-mint-300 px-2.5 py-1 rounded-full"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
       </div>
     </Link>
   );

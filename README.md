@@ -1,7 +1,7 @@
 # Claudia Popescu - Portfolio
 
 Personal portfolio website built with React, TypeScript and Tailwind CSS. Features dark/light mode, EN/DE language switching and a working contact form.
-**Live site:** [claudiapopescu-portfolio.vercele.app](https://claudiapopescu-portfolio.vercel.app/)
+**Live site:** [claudiapopescu-portfolio.vercel.app](https://claudiapopescu-portfolio.vercel.app/)
 
 ## Features
 
@@ -55,5 +55,6 @@ src/
 
 ## Contact
 
+- Live site: [claudiapopescu-portfolio.vercel.app](https://claudiapopescu-portfolio.vercel.app/)
 - GitHub: [@saftaclaudia](https://github.com/saftaclaudia)
 - LinkedIn: [Claudia Popescu](https://www.linkedin.com/in/claudia-popescu-frontend-developer/)

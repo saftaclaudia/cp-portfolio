@@ -159,7 +159,7 @@ function Contact() {
         <button
           type="submit"
           disabled={isSending}
-          className="bg-gray-900 dark:bg-white text-white dark:text-gray-900 px-6 py-3 rounded-lg font-medium hover:bg-gray-800 dark:hover:bg-gray-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-mint-500 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-50 dark:focus-visible:ring-offset-gray-950 transition-colors"
+          className="bg-coral-500 text-white px-6 py-3 rounded-lg font-medium hover:bg-coral-700 disabled:opacity-60 disabled:cursor-not-allowed focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-mint-500 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-50 dark:focus-visible:ring-offset-gray-950 transition-colors"
         >
           {isSending ? "..." : t("contact.send")}
         </button>

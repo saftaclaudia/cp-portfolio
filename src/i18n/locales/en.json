@@ -39,6 +39,7 @@
     "liveDemo": "Live Demo"
   },
   "projects": {
+    "eyebrow": "My Work",
     "interactive-resume": {
       "title": "Interactive Resume",
       "description": "This project is a modern, interactive resume built as a single-page web application. It combines clean UI design with dynamic JavaScript behavior to create an engaging user experience."

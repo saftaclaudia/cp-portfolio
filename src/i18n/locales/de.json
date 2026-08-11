@@ -39,6 +39,7 @@
     "liveDemo": "Live-Demo"
   },
   "projects": {
+    "eyebrow": "Meine Arbeit",
     "interactive-resume": {
       "title": "Interaktiver Lebenslauf",
       "description": "Dieses Projekt ist ein moderner, interaktiver Lebenslauf als Single-Page-Webanwendung. Es kombiniert sauberes UI-Design mit dynamischem JavaScript-Verhalten für ein ansprechendes Nutzererlebnis."
