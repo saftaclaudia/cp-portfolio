@@ -17,6 +17,7 @@ const socialLinks = [
 
 const navItems = [
   { to: "/", key: "header.home" },
+  { to: "/#skills", key: "header.skills" },
   { to: "/#projects", key: "header.projects" },
   { to: "/contact", key: "header.contact" },
 ];
@@ -33,7 +34,7 @@ function Logo() {
 
 function isNavItemActive(to: string, pathname: string, hash: string) {
   if (to === "/") return pathname === "/" && !hash;
-  if (to === "/#projects") return pathname === "/" && hash === "#projects";
+  if (to.startsWith("/#")) return pathname === "/" && hash === to.slice(1);
   return pathname === to;
 }
 

@@ -1,6 +1,7 @@
 {
   "header": {
     "home": "Home",
+    "skills": "Skills",
     "projects": "Projects",
     "contact": "Contact"
   },
@@ -13,6 +14,11 @@
     "downloadCv": "Download CV",
     "badge": "Frontend Developer • React Enthusiast",
     "available": "Available for work"
+  },
+  "skills": {
+    "eyebrow": "What I Use",
+    "title": "Skills & Tech",
+    "subtitle": "The tools and technologies I use to build clean, responsive web applications."
   },
   "contact": {
     "eyebrow": "Contact",

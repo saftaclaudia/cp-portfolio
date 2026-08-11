@@ -1,6 +1,7 @@
 {
   "header": {
     "home": "Startseite",
+    "skills": "Kenntnisse",
     "projects": "Projekte",
     "contact": "Kontakt"
   },
@@ -13,6 +14,11 @@
     "downloadCv": "Lebenslauf herunterladen",
     "badge": "Frontend-Entwickler • React-Enthusiast",
     "available": "Verfügbar für neue Projekte"
+  },
+  "skills": {
+    "eyebrow": "Meine Werkzeuge",
+    "title": "Skills & Technologien",
+    "subtitle": "Die Tools und Technologien, mit denen ich saubere, responsive Webanwendungen entwickle."
   },
   "contact": {
     "eyebrow": "Kontakt",
