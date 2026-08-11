@@ -74,7 +74,7 @@ function Contact() {
       setIsSubited(true);
       setFormData({ name: "", email: "", message: "" });
     } catch (error) {
-      console.log("EmilsJS error:", error);
+      console.error("EmailJS error:", error);
       setSendError(true);
     } finally {
       setIsSending(false);
@@ -101,7 +101,7 @@ function Contact() {
         )}
 
         {sendError && (
-          <div className="bg-red-100 dark:bk-red-900/30 text-red-700 dark:text-red-400 px-4 py-3 rounded-lg mb-6 text-center">
+          <div className="bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400 px-4 py-3 rounded-lg mb-6 text-center">
             {t("contact.errorSend")}
           </div>
         )}
